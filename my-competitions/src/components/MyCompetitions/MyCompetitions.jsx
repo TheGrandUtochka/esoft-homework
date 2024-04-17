@@ -15,6 +15,8 @@ const MyCompetitions = () => {
                     key={index}
                     title={competition.title}
                     image={competition.image}
+                    description={competition.description}
+                    completed={competition.completed}
             /> ))
     );
 };
