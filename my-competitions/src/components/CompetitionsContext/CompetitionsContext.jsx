@@ -65,9 +65,11 @@ export const CompetitionsProvider = ({ children }) => {
     const myCompetitions = competitions.filter(comp => comp.completed === 100);
     const myFutureCompetitions = competitions.filter(comp => comp.completed !== 100);
 
+    const moreFiftyCompetitions = competitions.filter(comp => comp.completed >= 50);
+    const lessFiftyCompetitions = competitions.filter(comp => comp.completed <= 50);
 
     return (
-        <CompetitionsContext.Provider value={{ myCompetitions, myFutureCompetitions }}>
+        <CompetitionsContext.Provider value={{ myCompetitions, myFutureCompetitions, moreFiftyCompetitions, lessFiftyCompetitions }}>
             {children}
         </CompetitionsContext.Provider>
     );

@@ -5,6 +5,9 @@ import Row from "react-bootstrap/Row";
 import MyCompetitions from "../MyCompetitions/MyCompetitions.jsx";
 import MyFutureCompetitions from "../MyFutureCompetitions/MyFutureCompetitions.jsx";
 import {CompetitionsProvider} from "../CompetitionsContext/CompetitionsContext.jsx";
+import ShowCompetitionFilterBtn from "../ShowCompetitionFilterBtn/ShowCompetitionFilterBtn.jsx";
+import LessFiftyCompetitions from "../LessFiftyCompetitions/LessFiftyCompetitions.jsx";
+import MoreFiftyCompetitions from "../MoreFiftyCompetitions/MoreFiftyCompetitions.jsx";
 
 function CompetitionBtn() {
     const [open, setOpen] = useState(false);
@@ -21,18 +24,8 @@ function CompetitionBtn() {
             </Button>
             <Collapse in={open}>
                 <div id='wrap-competitions'>
-                    <CompetitionsProvider>
-                        <Row>
-                            <h2>Мои компетенции:</h2>
-                            <MyCompetitions/>
-                            <h2>
-                                Компетенции, которые я бы хотел изучить:
-                            </h2>
-                            <MyFutureCompetitions/>
-                        </Row>
-                    </CompetitionsProvider>
+                    <ShowCompetitionFilterBtn/>
                 </div>
-
             </Collapse>
         </>
     );

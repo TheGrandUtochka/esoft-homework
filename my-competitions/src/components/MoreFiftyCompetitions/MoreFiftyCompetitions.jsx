@@ -2,15 +2,15 @@ import React, { useContext } from 'react';
 import { CompetitionsContext } from "../CompetitionsContext/CompetitionsContext.jsx";
 import CompetitionCard from "../CompetitionCard/CompetitionCard.jsx";
 
-const MyFutureCompetitions = () => {
-    const { myFutureCompetitions } = useContext(CompetitionsContext);
+const MoreFiftyCompetitions = () => {
+    const { moreFiftyCompetitions } = useContext(CompetitionsContext);
 
-    if (!myFutureCompetitions) {
-        return <div> Будущие компетенции не найдены. </div>;
+    if (!moreFiftyCompetitions) {
+        return <div> Ничего не найдено. </div>;
     }
 
     return (
-        myFutureCompetitions.map((competition, index) => (
+        moreFiftyCompetitions.map((competition, index) => (
             <CompetitionCard
                 key={index}
                 title={competition.title}
@@ -21,4 +21,4 @@ const MyFutureCompetitions = () => {
     );
 };
 
-export default MyFutureCompetitions;
+export default MoreFiftyCompetitions;

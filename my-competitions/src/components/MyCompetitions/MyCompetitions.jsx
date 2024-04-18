@@ -12,11 +12,11 @@ const MyCompetitions = () => {
     return (
         myCompetitions.map((competition, index) => (
             <CompetitionCard
-                    key={index}
-                    title={competition.title}
-                    image={competition.image}
-                    description={competition.description}
-                    completed={competition.completed}
+                key={index}
+                title={competition.title}
+                image={competition.image}
+                description={competition.description}
+                completed={competition.completed}
             /> ))
     );
 };
